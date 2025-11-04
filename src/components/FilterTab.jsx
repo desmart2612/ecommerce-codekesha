@@ -1,5 +1,5 @@
 import React from 'react'
-import Dropdown from './Dropdown.jsx'
+import MyDropdown from './MyDropdown.jsx'
 
 function FilterTab() {
     const filters = [
@@ -50,10 +50,10 @@ function FilterTab() {
         }
     ]
     return (
-        <div style={{ display: "flex", alignItems: "center", gap: "10px", margin: "20px 0px 0px", justifyContent: "space-evenly", padding: "0 3rem" }}>
+        <div className='flex-wrap' style={{ display: "flex", alignItems: "center", gap: "5px", margin: "20px 0px 0px", justifyContent: "start", padding: "0 3rem" }}>
             <p className='text-nowrap m-0'>Filter by:</p>
             {filters.map((filter) => (
-                <Dropdown key={filter.name} first={filter.name} options={[filter]} />
+                <MyDropdown key={filter.name} label={filter.name} options={filter.options} />
             ))}
         </div>
     )

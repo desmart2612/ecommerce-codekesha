@@ -12,6 +12,30 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@media screen and (max-width: 576px) {
+  .filter{
+    width: 98% !important;
+  }
+  .heroSection{
+    flex-direction: column !important;
+    align-items: start !important;
+  }
+  .heroSection img{
+    width: 100% !important;
+  }
+  .navbar .navIcons{
+    margin-top: 10px !important;
+    width: 100% !important;
+    justify-content: space-evenly !important;
+    border-top: 0.5px solid #686868 !important;
+    padding-top: 20px !important;
+  }
+  .navbar .navLinks{
+    margin-left: 0 !important;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -30,15 +54,28 @@ body {
   width: 100vw;
 }
 
-.navbar h5 {
+.navbar h5, .footer h5 {
   font-weight: bold;
   font-family: "TT Fors Trial DemiBold", sans-serif;
   margin: 0;
 }
 
+#active-mark{
+  width: 90px;
+  height: 40px;
+  top: -5;
+  left: 32.5%;
+  transition: left 0.8s ease;
+}
+
+.active-tab{
+  color: white !important;
+}
+
 .navbar .navLinks {
   list-style: none;
   margin: 0;
+  margin-left: 25%;
 }
 
 .navbar .navLinks li, select {
@@ -46,7 +83,10 @@ body {
   margin-right: 15px;
   font-family: "TT Fors Trial Regular", sans-serif;
   cursor: pointer;
+  transition: color 0.9s ease;
 }
+
+
 
 .navbar .navIcons {
   width: fit-content;
@@ -145,6 +185,12 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.productCard:hover{  
+  box-shadow: 8px 8px 10px #72727298;
 }
 
 .productCard img {
@@ -160,4 +206,17 @@ body {
   display: inline-block;
   margin-right: 5px;
   border: 1px solid #ccc;
+}
+
+.filter{
+  width: 15%;
+}
+
+.filter-expand, .filter-collapse{
+  cursor: pointer;
+}
+
+.filter-btn:hover{
+  background-color: #0000ff50;
+  color: white;
 }

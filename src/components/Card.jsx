@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Card({ product }) {
+function Card({ product, open }) {
   return (
-    <div className="productCard">
+    <div className="productCard" onClick={open}>
       <img src={product.image} alt={product.name} className="productImage" />
       <div style={{padding: "10px"}}>
         <p className="productName">{product.name}</p>
