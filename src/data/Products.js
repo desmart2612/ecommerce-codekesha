@@ -4,7 +4,7 @@ const data = {
       "id": 1,
       "name": "Love Shirt Coat II",
       "price": "$16.00",
-      "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=400&fit=crop",
+      "image": "images/black&white_hills.jpg",
       "colors": [
         { "name": "blue", "hex": "#4A5568" },
         { "name": "pink", "hex": "#ED64A6" },
@@ -15,7 +15,7 @@ const data = {
       "id": 2,
       "name": "Love Shirt Coat II",
       "price": "$16.00",
-      "image": "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=400&h=400&fit=crop",
+      "image": "images/FavoritePicks.jpg",
       "colors": [
         { "name": "navy", "hex": "#2D3748" },
         { "name": "brown", "hex": "#744210" },
@@ -26,7 +26,7 @@ const data = {
       "id": 3,
       "name": "Love Shirt Coat II",
       "price": "$16.00",
-      "image": "https://images.unsplash.com/photo-1603320409990-02d834987237?w=400&h=400&fit=crop",
+      "image": "images/custom_nike.jpg",
       "colors": [
         { "name": "navy", "hex": "#2D3748" },
         { "name": "gray", "hex": "#718096" },
@@ -37,7 +37,7 @@ const data = {
       "id": 4,
       "name": "Love Shirt Coat II",
       "price": "$16.00",
-      "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=400&fit=crop",
+      "image": "images/sneakers.jpg",
       "colors": [
         { "name": "navy", "hex": "#2D3748" },
         { "name": "gray", "hex": "#A0AEC0" },
@@ -48,7 +48,7 @@ const data = {
       "id": 5,
       "name": "Love Shirt Coat II",
       "price": "$16.00",
-      "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=400&fit=crop",
+      "image": "images/download (3).jpg",
       "colors": [
         { "name": "beige", "hex": "#D6BCAF" },
         { "name": "white", "hex": "#F7FAFC" },
@@ -59,7 +59,7 @@ const data = {
       "id": 6,
       "name": "Love Shirt Coat II",
       "price": "$16.00",
-      "image": "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=400&h=400&fit=crop",
+      "image": "images/download (4).jpg",
       "colors": [
         { "name": "pink", "hex": "#FBB6CE" },
         { "name": "white", "hex": "#F7FAFC" },
@@ -70,7 +70,7 @@ const data = {
       "id": 7,
       "name": "Love Shirt Coat II",
       "price": "$16.00",
-      "image": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=400&h=400&fit=crop",
+      "image": "images/elegant_deep_vnecklongsleevedprincessdress.jpg",
       "colors": [
         { "name": "cream", "hex": "#FFF5E1" },
         { "name": "beige", "hex": "#D6BCAF" },
@@ -81,7 +81,7 @@ const data = {
       "id": 8,
       "name": "Love Shirt Coat II",
       "price": "$16.00",
-      "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=400&fit=crop",
+      "image": "images/New Stylish Elegant Pleated Off-Shoulder Evening Gown.jpg",
       "colors": [
         { "name": "navy", "hex": "#2D3748" },
         { "name": "gray", "hex": "#A0AEC0" },
@@ -134,6 +134,94 @@ const data = {
         { "name": "black", "hex": "#1A202C" },
         { "name": "olive", "hex": "#718096" }
       ]      
+    },
+    {
+      "id": 13,
+      "name": "IPhone 17 pro",
+      "price": "$2500.00",
+      "image": "images/IPhone_17.jpg",
+      "colors": [
+        { "name": "beige", "hex": "#D69E2E" },
+        { "name": "black", "hex": "#1A202C" },
+        { "name": "olive", "hex": "#718096" }
+      ]      
+    },
+    {
+      "id": 14,
+      "name": "Samsung S25 Ultra",
+      "price": "$2000.00",
+      "image": "images/samsung_s25_ultra.jpg",
+      "colors": [
+        { "name": "beige", "hex": "#D69E2E" },
+        { "name": "black", "hex": "#1A202C" },
+        { "name": "olive", "hex": "#718096" }
+      ]      
+    },
+    {
+      "id": 15,
+      "name": "Curved Screen Monitor",
+      "price": "$1000.00",
+      "image": "images/monitor.jpg",
+      "colors": [
+        { "name": "beige", "hex": "#D69E2E" },
+        { "name": "black", "hex": "#1A202C" },
+        { "name": "olive", "hex": "#718096" }
+      ]      
+    },
+    {
+      "id": 16,
+      "name": "Canon Camera",
+      "price": "$1500.00",
+      "image": "images/Canon camera.jpg",
+      "colors": [
+        { "name": "beige", "hex": "#D69E2E" },
+        { "name": "black", "hex": "#1A202C" },
+        { "name": "olive", "hex": "#718096" }
+      ]      
+    },
+    {
+      "id": 17,
+      "name": "Elite Gaming Chair",
+      "price": "$250.00",
+      "image": "images/Elite_Gaming_Chair.jpg",
+      "colors": [
+        { "name": "beige", "hex": "#D69E2E" },
+        { "name": "black", "hex": "#1A202C" },
+        { "name": "olive", "hex": "#718096" }
+      ]      
+    },
+    {
+      "id": 18,
+      "name": "Aesthetic Mechanical Keyboard",
+      "price": "$150.00",
+      "image": "images/keyboard.jpg",
+      "colors": [
+        { "name": "beige", "hex": "#D69E2E" },
+        { "name": "black", "hex": "#1A202C" },
+        { "name": "olive", "hex": "#718096" }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Aesthetic Gaming Mouse",
+      "price": "$80.00",
+      "image": "images/mouse.jpg",
+      "colors": [
+        { "name": "beige", "hex": "#D69E2E" },
+        { "name": "black", "hex": "#1A202C" },
+        { "name": "olive", "hex": "#718096" }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Aesthetic Gaming PC",
+      "price": "$1200.00",
+      "image": "images/gaming_pc.jpg",
+      "colors": [
+        { "name": "beige", "hex": "#D69E2E" },
+        { "name": "black", "hex": "#1A202C" },
+        { "name": "olive", "hex": "#718096" }
+      ]
     }
   ]
 }

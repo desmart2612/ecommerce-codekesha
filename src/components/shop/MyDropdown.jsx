@@ -18,11 +18,11 @@ function MyDropdown({label, options}) {
             <div className='btn bg-light shadow-sm rounded-2 p-2 d-flex justify-content-between align-items-center' onClick={handleClicked}>
                 <span>{selected || 'Category'}</span>
                 {!clicked ?
-                    <svg className='size-6 filter-expand' xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor">
+                    <svg className='ms-2 size-6 filter-expand' xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                     </svg>
                     :
-                    <svg className='size-6 filter-collapse' xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor">
+                    <svg className='ms-2 size-6 filter-collapse' xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
                     </svg>
                 }

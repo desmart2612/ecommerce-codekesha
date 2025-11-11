@@ -3,17 +3,17 @@ import React from 'react'
 function Footer() {
     return (
         <div className='bg-dark footer'>
-            <div className='d-flex flex-wrap gap-2 p-4'>
-                <div className='d-flex flex-column justify-content-center align-items-start' style={{width: '35%'}}>
+            <div className='d-flex flex-lg-row flex-column gap-2 p-4'>
+                <div className='d-flex flex-column justify-content-center align-items-start footer-sections w-25'>
                     <h4 className='text-light'>Receive an Exclusive <span className='text-danger'>20%</span> discount code when you sign up.</h4>
-                    <form className=''>
-                        <div className='border border-bottom-1 border-top-0 border-start-0 border-end-0 border-secondary d-flex gap-3 py-2 px-4 flex-wrap'>
-                            <input type='email' className=' px-2 rounded-2 border-0 bg-dark text-light flex-grow-0 flex-shrink-1' placeholder='Enter your Email' />
+                    {/* <form className='w-100'>
+                        <div className='border border-bottom-1 border-top-0 border-start-0 border-end-0 border-secondary d-flex gap-3 pt-2 pb-4 px-lg--4 px-0'>
+                            <input type='email' className=' px-2 rounded-2 border-0 bg-dark text-light flex-fill' placeholder='Enter your Email' />
                             <button className='btn border-0 bg-dark text-light'>Subscribe</button>
                         </div>
-                    </form>
+                    </form> */}
                 </div>
-                <div className='border border-start-1 border-top-0 border-end-0 border-bottom-0 p-4 border-secondary flex-fill'>
+                <div className='border border-start-1 border-top-0 border-end-0 border-bottom-0 p-4 border-secondary flex-fill footer-sections'>
                     <h5 className="text-light mb-2">Company</h5>
                     <ul className="ps-0 mb-0" style={{listStyleType: 'none'}}>
                         <li><a className="text-light text-decoration-none" href="#">About Us</a></li>
@@ -22,7 +22,7 @@ function Footer() {
                         <li><a className="text-light text-decoration-none" href="#">Locations</a></li>
                     </ul>
                 </div>
-                <div className='border border-start-1 border-top-0 border-end-0 border-bottom-0 p-4 border-secondary flex-fill'>
+                <div className='border border-start-1 border-top-0 border-end-0 border-bottom-0 p-4 border-secondary flex-fill footer-sections'>
                     <h5 className="text-light mb-2">Customer Care</h5>
                     <ul className="ps-0 mb-0" style={{listStyleType: 'none'}}>
                         <li><a className="text-light text-decoration-none" href="#">Size Guide</a></li>
@@ -31,7 +31,7 @@ function Footer() {
                         <li><a className="text-light text-decoration-none" href="#">Refer a Friend</a></li>
                     </ul>
                 </div>
-                <div className='border border-start-1 border-top-0 border-end-0 border-bottom-0 p-4 border-secondary flex-fill'>
+                <div className='border border-start-1 border-top-0 border-end-0 border-bottom-0 p-4 border-secondary flex-fill footer-sections'>
                     <h5 className="text-light mb-2">Terms And Policies</h5>
                     <ul className="ps-0 mb-0" style={{listStyleType: 'none'}}>
                         <li><a className="text-light text-decoration-none" href="#">Duties & Taxes</a></li>
@@ -40,7 +40,7 @@ function Footer() {
                         <li><a className="text-light text-decoration-none" href="#">Terms & Conditions</a></li>
                     </ul>
                 </div>
-                <div className='border border-start-1 border-top-0 border-end-0 border-bottom-0 p-4 border-secondary flex-fill'>
+                <div className='border border-start-1 border-top-0 border-end-0 border-bottom-0 p-4 border-secondary flex-fill footer-sections'>
                     <h5 className="text-light mb-2">Follow Us</h5>
                     <ul className="ps-0 mb-0" style={{listStyleType: 'none'}}>
                         <li><a className="text-light text-decoration-none" href="#">Instagram</a></li>
@@ -50,7 +50,7 @@ function Footer() {
                     </ul>
                 </div>                
             </div>
-            <div className='border border-bottom-0 border-top-1 border-start-0 border-end-0 border-secondary p-4 d-flex justify-content-between'>
+            <div className='border border-bottom-0 border-top-1 border-start-0 border-end-0 border-secondary p-4 d-flex justify-content-between flex-wrap'>
                 <div className='d-flex gap-3'>
                     <h5 className='text-light align-items-end'>KeshaMart</h5>
                     <small className='text-light mt-1' style={{fontSize: '13px'}}>&copy; 2025 October.All rights reserved.</small>

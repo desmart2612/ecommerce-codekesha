@@ -1,7 +1,10 @@
-import { useLayoutEffect, useRef } from 'react'
+import { useLayoutEffect, useRef, useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom';
+
 
 function Navbar() {
 
+    const [activeTabKey, setActiveTabKey] = useState('shop'); // default tab
     const activeMarkRef = useRef(null);
     const tabRefs = {
         home: useRef(null),
@@ -15,24 +18,74 @@ function Navbar() {
     const navListRef = useRef(null);
 
     const moveMarker = (tabKey) => {
-        
-        const tab = tabRefs[tabKey].current;
-        const marker = activeMarkRef.current;        
-        console.log('parent:', navListRef.current);
-        if (tab && marker) {                        
-            const leftOffset = tab.offsetLeft + tab.offsetWidth / 2 - 45;
-            marker.style.left = `${leftOffset}px`;
 
-            Object.values(tabRefs).forEach(ref => {
-                if (ref.current) ref.current.classList.remove('active-tab');
-            });
-            tab.classList.add('active-tab');
+        const tabRef = tabRefs[tabKey];
+        const marker = activeMarkRef.current;
+
+        if (!tabRef || !tabRef.current || !marker) return; // prevent crash
+
+        const tab = tabRef.current;
+
+        setActiveTabKey(tabKey);
+
+        const isSmallScreen = window.innerWidth < 768;
+
+        // Reset all tabs
+        Object.values(tabRefs).forEach(ref => {
+            if (ref.current) ref.current.classList.remove('active-tab');
+        });
+        tab.classList.add('active-tab');
+
+        if (isSmallScreen) {
+            if (tabKey == 'shop') {
+                const topOffset = tab.offsetTop + tab.offsetHeight / 2 - 20; // center the marker vertically
+                marker.style.top = `${topOffset}px`;
+                marker.style.left = '0px'; // optional: align left edge
+            }
+            else {
+                // Vertical marker movement
+                const topOffset = tab.offsetTop + tab.offsetHeight / 2 - 20; // center the marker vertically
+                marker.style.top = `${topOffset}px`;
+                marker.style.left = '0px'; // optional: align left edge
+            }
+        } else {
+            // Horizontal marker movement
+            const leftOffset = tab.offsetLeft + tab.offsetWidth / 2 - 45; // center the marker horizontally
+            marker.style.left = `${leftOffset}px`;
+            // marker.style.top = '0'; // optional: reset top
         }
     };
 
+    useEffect(() => {
+        const handleResize = () => {
+            if (activeTabKey) moveMarker(activeTabKey);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [activeTabKey]);
+
+    const location = useLocation();
+
+    useEffect(() => {
+        const path = location.pathname.replace('/', '') || 'home';
+        moveMarker(path);
+    }, [location]);
+
     useLayoutEffect(() => {
-        moveMarker('shop'); // default active tab
+        const checkAndMove = () => {
+            const nav = document.getElementById('navbarSupportedContent');
+            const isVisible = nav && window.getComputedStyle(nav).display !== 'none';
+
+            if (isVisible) {
+                moveMarker('shop');
+            } else {
+                setTimeout(checkAndMove, 50); // retry until visible
+            }
+        };
+
+        checkAndMove();
     }, []);
+
 
     return (
         <div className='navbar navbar-expand-lg'>
@@ -45,7 +98,7 @@ function Navbar() {
                 {/* <h5>KeshaMart</h5> */}
                 <div className="collapse navbar-collapse position-relative" id="navbarSupportedContent">
                     <div ref={activeMarkRef} className='z-1 bg-dark position-absolute rounded-pill' id='active-mark'></div>
-                    <ul ref={navListRef} className='navbar-nav me-auto mb-2 mb-lg-0 navLinks z-2'>                        
+                    <ul ref={navListRef} className='navbar-nav me-auto mb-2 mb-lg-0 navLinks z-3'>
                         {['home', 'shop', 'products', 'pages', 'blog', 'elements'].map(key => (
                             <li
                                 key={key}
@@ -54,7 +107,9 @@ function Navbar() {
                                 className={`ms-4 ${key === 'shop' ? 'active-tab' : ''}`}
                                 onClick={() => moveMarker(key)}
                             >
-                                {key.charAt(0).toUpperCase() + key.slice(1)}
+                                <Link to={`/${key}`} className='text-decoration-none text-dark'>
+                                    {key.charAt(0).toUpperCase() + key.slice(1)}
+                                </Link>
                             </li>
                         ))}
                     </ul>

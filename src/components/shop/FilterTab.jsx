@@ -51,7 +51,7 @@ function FilterTab() {
     ]
     return (
         <div className='flex-wrap' style={{ display: "flex", alignItems: "center", gap: "5px", margin: "20px 0px 0px", justifyContent: "start", padding: "0 3rem" }}>
-            <p className='text-nowrap m-0'>Filter by:</p>
+            <p className='text-nowrap fw-bold m-0'>Filter by:</p>
             {filters.map((filter) => (
                 <MyDropdown key={filter.name} label={filter.name} options={filter.options} />
             ))}
